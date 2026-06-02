@@ -1,5 +1,11 @@
-function dicas_namoro(){
+function abrir_tela2(){
     document.getElementById("tela_inicial").style.display = "none"
+
+    document.getElementById("tela2").style.display = "block"
+
+}
+
+function dicas_namoro(){
 
     document.getElementById("tela_dica_namoro").style.display = "block"
 
