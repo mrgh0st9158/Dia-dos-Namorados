@@ -60,6 +60,18 @@ button:hover{
     
 }
 
+#foto_gato_presente{
+    width: 230px;
+}
+
+#foto_gato_musica{
+    width: 270px;
+}
+
+#foto_gato_poesia{
+    width: 250px;
+}
+
 .botao_tela2{
     display: flex;
     flex-direction: column;
@@ -79,19 +91,37 @@ button:hover{
 .container {
   display: grid;
   grid-template-columns: auto auto auto;
-  padding: 100px;
+  padding: 50px;
   gap: 30px;
 }
 
 .container div {
+  justify-content: center;
   background-color: #f1f1f1;
   color: #000;
   padding: 10px;
   font-size: 30px;
   text-align: center;
+  gap: 35px;
 }
 
 .grid1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.grid2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.grid3{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,4 +133,11 @@ button:hover{
     width: 80px;
 }
 
+#botao_grid2{
+    width: 80px;
+}
 
+
+#botao_grid3{
+    width: 80px;
+}

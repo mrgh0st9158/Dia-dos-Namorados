@@ -5,10 +5,11 @@ function abrir_tela2(){
 
 }
 
-function dicas_namoro(){
-
+function botao_presente(){
+    document.getElementById("tela2").style.display = "none"
+    
     document.getElementById("tela_dica_namoro").style.display = "block"
-
+    
 }
 
 function caixa_bombom_dica(){
