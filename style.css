@@ -1,11 +1,69 @@
 body {
-    background-color: #fff5f6;
-    background-image: 
-        linear-gradient(white 2px, transparent 2px),
-        linear-gradient(90deg, white 2px, transparent 2px);
-    background-size: 35px 35px;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #0c0507; /* Um preto com fundo levemente vinho */
+  color: #ffffff;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.background_galaxia {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  /* MUDANÇA 1: Desativamos a repetição para cada círculo ter seu lugar único */
+  background-repeat: no-repeat;
+
+  /* MUDANÇA 2: Posicionamos elementos de tamanhos diferentes em cantos estratégicos */
+  background-image:
+    /* Estrela brilhante no topo direito */
+    radial-gradient(3px 3px at 85% 15%, #ffffff, transparent),
+    
+    /* Estrela perdida no canto inferior esquerdo */
+    radial-gradient(2px 2px at 15% 85%, #ffffff, transparent),
+    
+    /* Estrela rosa romântica perto do centro */
+    radial-gradient(2px 2px at 35% 45%, #fda4af, transparent),
+    
+    /* Estrela pequenininha no topo esquerdo */
+    radial-gradient(1px 1px at 25% 20%, #ffffff, transparent),
+
+    /* NÚCLEO DA GALÁXIA: O grande brilho vermelho/vinho central */
+    radial-gradient(circle at 50% 50%, rgba(225, 29, 72, 0.25) 0%, transparent 60%),
+    
+    /* NÉVOA SECUNDÁRIA: Um segundo brilho roxo/rosa no canto para quebrar a simetria */
+    radial-gradient(circle at 80% 70%, rgba(192, 38, 211, 0.15) 0%, transparent 50%);
+
+  /* Ativa a nossa animação de pulso */
+  animation: pulsoGalaxia 10s ease-in-out infinite alternate;
+}
+
+@keyframes pulsoGalaxia {
+    0% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.17);
+    }
+}
+
+.conteiner_subtitulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+    gap: 240px;
+
 }
 
 #titulo{
@@ -18,20 +76,24 @@ body {
     text-align: left;
     width: 500px;
     margin-top: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
     
 }
 
 button{
     color: rgb(0, 0, 0);
-    background-color: rgb(250, 132, 132);
+    background-color: rgb(163, 20, 67);
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    
 
 }
 
 button:hover{
-    background-color: rgb(206, 111, 111);
+    background-color: rgb(66, 6, 24);
 }
 
 #p-dica_caixa_bombom{
@@ -46,17 +108,10 @@ button:hover{
     gap: 12px;
 }
 
-.conteiner_subtitulo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
 
-}
-
-#foto_caveira{
-    width: 330px;
-    height: 330px;
+#foto_addams{
+    width: 320px;
+    
     
 }
 
@@ -86,23 +141,28 @@ button:hover{
 
 #titulo_tela2{
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
 }
 
 .container {
   display: grid;
   grid-template-columns: auto auto auto;
-  padding: 50px;
+  padding: 40px;
   gap: 30px;
 }
 
 .container div {
   justify-content: center;
-  background-color: #f1f1f1;
+  background-color: #810c20;
   color: #000;
+  border-radius: 32px;
   padding: 10px;
   font-size: 30px;
   text-align: center;
   gap: 35px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
 }
 
 .grid1{
