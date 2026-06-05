@@ -21,7 +21,7 @@
       </p>
       
       <div id="layout_botoes_header">
-        <button onclick="" class="botoes_header">Início</button>
+        <button onclick="voltar_inicio()" class="botoes_header">Início</button>
         <button onclick="" class="botoes_header">Contato</button>
       </div>
       
@@ -31,7 +31,7 @@
 
   <main>
 
-    <section id="tela_inicial_original" style="display: block;">
+    <section id="tela_inicial" style="display: block;">
 
       <div id="conteiner_tela_inicio">
 
@@ -49,6 +49,7 @@
             lado, perceba o que faz os olhos da pessoa brilharem e use essa percepção para
             criar um momento verdadeiramente único, pois a autenticidade de um gesto simples
             muitas vezes supera o luxo de qualquer banquete sofisticado.
+
           </p>
           
           <p id="paragrafo_inicial_2">
@@ -69,67 +70,60 @@
       
       <img src="foto-baly-inicio.JPG" alt="" id="foto_baly_inicio">
 
+      
+    </div>
+
+    <div id="layout_botao_tela_inicial">
+      <p id="p-tela_inicial">Clique Aqui!</p>
+      
+      <button onclick="abrir_tela_dicas()" id="botao_tela_inicial"><img src="foto-pata.PNG" alt="" id="foto_botao_tela_inicial"></button>
 
     </div>
-      
-    </section>
+    
+  </section>
     
     
-    <section id="tela_inicial" style="display: none;">
-      
-      <div id="conteiner_subtitulo">
+    <section id="tela_dicas" style="display: none;">
         
-        <h2 id="subtitulo">
-          Em meio à correria da rotina, como poderemos
-          esquecer de parar e celebrar o sentimento mais
-          bonito que nos une? O Dia dos Namorados nos
-          lembra de desacelerar e valorizar quem caminha
-          ao nosso lado. Explore este site e encontre formas
-          simples e carinhosas de demonstrar todo o seu amor.
-        </h2>
-        
-        <img src="Morticia and Gomez.jpeg" alt="" id="foto_addams">
-        
-      </div>
-      
-      
-      <hr>
-      
-      <div id="botao_tela2">
-        <button onclick="abrir_tela2()" id="design_botao_tela2">Clique Aqui!</button>
-      </div>
-      
-    </section>
-    
-    
-    <section id="tela2" style="display: none;">
-        
-        <h1 id="titulo_tela2">Escolha o que deseja:</h1> 
+        <h1 id="titulo_tela_dicas">Escolha o que deseja:</h1> 
         
         <div class="container_grid">
           
           <div id="grid1">
-            Ideias de presentes românticos para seu parceiro
-            
-            <img src="gato_presente.jpg" alt="" id="foto_gato_presente">
+            <p class="titulos_grid">
+              Ideias de presentes românticos para seu parceiro
+
+            </p>
+
+            <div class="fotos_grid">
+              <img src="foto-baly-presente.png" alt="" id="foto_baly_presente">
+            </div>
             
             <button onclick="botao_presente()" id="botao_grid1">Clique Aqui!</button>
           </div>
           
           
           <div id="grid2">
-            Músicas para se dedicar ao seu parceiro
+            <p class="titulos_grid">
+              Músicas para se dedicar ao seu parceiro
+            </p>
             
-            <img src="gato_musica.jpeg" alt="" id="foto_gato_musica">
+            <div class="fotos_grid">
+              <img src="foto-baly-musica.png" alt="" id="foto_baly_musica">
+            </div>
             
             <button onclick="" id="botao_grid2">Clique Aqui!</button>
             
           </div>
           
           <div id="grid3">
-            Palavras bonitas para se dizer ao seu parceiro
+            <p class="titulos_grid">
+              Palavras bonitas para se dizer ao seu parceiro
+            </p>
             
-            <img src="gato_poesia.jpeg" alt="" id="foto_gato_poesia">
+            <div class="fotos_grid">
+              <video src="video-baly-miando.mp4" loop muted playsinline id="video_baly_miando"></video>
+            </div>
             
             <button onclick="" id="botao_grid3">Clique Aqui!</button>
             
@@ -139,20 +133,20 @@
       </section>
       
       
-      <section id="tela_dica_namoro" style="display: none;">
-    <h2 id="titulo_tela2">Você deseja dicas para melhorar, ou até mesmo tirar um sorriso do seu parceiro(a)</h2>
+      <section id="tela_dica_presentes" style="display: none;">
+        <h2 id="titulo_tela_dica_presentes">Você deseja dicas para melhorar, ou até mesmo tirar um sorriso do seu parceiro(a)</h2>
+        
+        <button onclick="caixa_bombom_dica()">Caixa de bombons</button>
+        
+        <div class="conteiner_caixa_bombom">
+          
+          <p id="p-dica_caixa_bombom"></p>
+          
+          <img src="foto gato chocolate.png" alt="" id="foto_gato_chocolate" style="display: none;">
+          
+        </div>
+      </section>
     
-    <button onclick="caixa_bombom_dica()">Caixa de bombons</button>
-    
-    <div class="conteiner_caixa_bombom">
-      
-      <p id="p-dica_caixa_bombom"></p>
-      
-      <img src="foto gato chocolate.png" alt="" id="foto_gato_chocolate" style="display: none;">
-      
-    </div>
-    
-  </section>
   
   
 </main>

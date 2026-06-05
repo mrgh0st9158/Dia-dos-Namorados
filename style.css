@@ -26,17 +26,27 @@ body {
 
   /* MUDANÇA 2: Posicionamos elementos de tamanhos diferentes em cantos estratégicos */
   background-image:
-    /* Estrela brilhante no topo direito */
+    /* estrelas */
     radial-gradient(3px 3px at 85% 15%, #ffffff, transparent),
     
-    /* Estrela perdida no canto inferior esquerdo */
+    radial-gradient(3px 3px at 90% 20%, #ffffff, transparent),
+    
     radial-gradient(2px 2px at 15% 85%, #ffffff, transparent),
     
-    /* Estrela rosa romântica perto do centro */
-    radial-gradient(2px 2px at 35% 45%, #fda4af, transparent),
+    radial-gradient(5px 5px at 25% 20%, #ffffff, transparent),
     
-    /* Estrela pequenininha no topo esquerdo */
-    radial-gradient(1px 1px at 25% 20%, #ffffff, transparent),
+    radial-gradient(3px 3px at 40% 20%, #ffffff, transparent),
+
+    radial-gradient(5px 5px at 10% 40%, #ffffff, transparent),
+
+
+    /* estrelas rosas românticas */
+    radial-gradient(3px 3px at 55% 45%, #fda4af, transparent),
+
+    radial-gradient(4px 4px at 80% 90%, #fda4af, transparent),
+
+    radial-gradient(5px 5px at 35% 80%, #fda4af, transparent),
+    
 
     /* NÚCLEO DA GALÁXIA: O grande brilho vermelho/vinho central */
     radial-gradient(circle at 50% 50%, rgba(225, 29, 72, 0.25) 0%, transparent 60%),
@@ -73,10 +83,16 @@ header{
     
 }
 
+#titulo_header{
+    font-family: "Skinship";
+    font-size: 25px;
+
+}
+
 .botoes_header{
     color: #ffffff;
     font-size: 18px;
-    background-color: #3f0e2b;
+    background: none;
     border: none;
 }
 
@@ -85,14 +101,14 @@ header{
     align-items: center;
     justify-content: space-around;
     margin-top: 60px;
-    gap: 60px;
+    gap: 40px;
 }
 
 #conteiner_paragrafo_inicio{
     display: flex;
     flex-direction: column;
     gap: 25px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #paragrafo_inicial_1{
@@ -100,7 +116,7 @@ header{
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: 19px;
-    width: 800px;
+    width: 730px;
 }
 
 #paragrafo_inicial_2{
@@ -108,7 +124,7 @@ header{
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: 19px;
-    width: 800px;
+    width: 730px;
 }
 
 #foto_baly_inicio{
@@ -126,7 +142,30 @@ header{
     border-bottom-color: #000000;
     border-bottom-width: 12px;
     
-    
+}
+
+#layout_botao_tela_inicial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#foto_botao_tela_inicial{
+    width: 80px;
+}
+
+#botao_tela_inicial{
+    background: none;
+    border: none;
+
+}
+
+#p-tela_inicial{
+    font-family: "Skinship";
+    font-size: 28px;
+
 }
 
 #conteiner_subtitulo{
@@ -137,27 +176,6 @@ header{
     margin-top: 70px;
     gap: 240px;
 
-}
-
-#titulo_header{
-    font-family: "Skinship";
-    font-size: 25px;
-
-}
-
-#titulo{
-    text-align: center;
-    font-style: italic;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-#subtitulo{
-    text-align: left;
-    width: 500px;
-    margin-top: 40px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 28px;
-    
 }
 
 button{
@@ -188,24 +206,6 @@ button:hover{
 }
 
 
-#foto_addams{
-    width: 320px;
-    
-    
-}
-
-#foto_gato_presente{
-    width: 230px;
-}
-
-#foto_gato_musica{
-    width: 270px;
-}
-
-#foto_gato_poesia{
-    width: 250px;
-}
-
 #botao_tela2{
     display: flex;
     flex-direction: column;
@@ -213,15 +213,11 @@ button:hover{
     
 }
 
-#design_botao_tela2{
-    padding: 30px;
-    
-}
-
-#titulo_tela2{
+#titulo_tela_dicas{
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
+    font-family: "Skinship";
+    font-size: 30px;
+    margin-top: 30px;
 }
 
 .container_grid {
@@ -232,34 +228,31 @@ button:hover{
 }
 
 .container_grid div {
-     justify-content: center;
-     background-color: #6b0a1a;
-     color: #000;
-     border-radius: 32px;
-     padding: 10px;
-     font-size: 30px;
-     text-align: center;
-     gap: 35px;
-     font-family: 'Times New Roman', Times, serif;
-     font-style: oblique;
-}
-
-#grid1{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-
+    justify-content: space-between;
+    background-color: #6b0a1a;
+    color: #000;
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-size: 30px;
+    text-align: center;
+    gap: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    
 }
 
-#grid2{
+.titulos_grid{
+    min-height: 80px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 20px;
-
+    justify-content: center;
 }
 
+
+#grid1,
+#grid2,
 #grid3{
     display: flex;
     flex-direction: column;
@@ -268,17 +261,20 @@ button:hover{
 
 }
 
-#botao_grid1{
-    width: 80px;
-}
-
-#botao_grid2{
-    width: 80px;
-}
-
-
+#botao_grid1,
+#botao_grid2,
 #botao_grid3{
     width: 80px;
+}
+
+#foto_baly_presente,
+#foto_baly_musica,
+#video_baly_miando{
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-style: double;
+    border-width: 7px;
 }
 
 @font-face {
