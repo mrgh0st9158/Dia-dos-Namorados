@@ -31,7 +31,7 @@
 
   <main>
 
-    <section id="tela_inicial" style="display: block;">
+    <section id="tela_inicial" class="tela_escondida">
 
       <div id="conteiner_tela_inicio">
 
@@ -83,72 +83,88 @@
   </section>
     
     
-    <section id="tela_dicas" style="display: none;">
-        
-        <h1 id="titulo_tela_dicas">Escolha o que deseja:</h1> 
-        
-        <div class="container_grid">
-          
-          <div id="grid1">
-            <p class="titulos_grid">
-              Ideias de presentes românticos para seu parceiro
-
-            </p>
-
-            <div class="fotos_grid">
-              <img src="foto-baly-presente.png" alt="" id="foto_baly_presente">
-            </div>
-            
-            <button onclick="botao_presente()" id="botao_grid1">Clique Aqui!</button>
-          </div>
-          
-          
-          <div id="grid2">
-            <p class="titulos_grid">
-              Músicas para se dedicar ao seu parceiro
-            </p>
-            
-            <div class="fotos_grid">
-              <img src="foto-baly-musica.png" alt="" id="foto_baly_musica">
-            </div>
-            
-            <button onclick="" id="botao_grid2">Clique Aqui!</button>
-            
-          </div>
-          
-          <div id="grid3">
-            <p class="titulos_grid">
-              Palavras bonitas para se dizer ao seu parceiro
-            </p>
-            
-            <div class="fotos_grid">
-              <video src="video-baly-miando.mp4" loop muted playsinline id="video_baly_miando"></video>
-            </div>
-            
-            <button onclick="" id="botao_grid3">Clique Aqui!</button>
-            
-          </div>  
-        </div>
-        
-      </section>
-      
-      
-      <section id="tela_dica_presentes" style="display: none;">
-        <h2 id="titulo_tela_dica_presentes">Você deseja dicas para melhorar, ou até mesmo tirar um sorriso do seu parceiro(a)</h2>
-        
-        <button onclick="caixa_bombom_dica()">Caixa de bombons</button>
-        
-        <div class="conteiner_caixa_bombom">
-          
-          <p id="p-dica_caixa_bombom"></p>
-          
-          <img src="foto gato chocolate.png" alt="" id="foto_gato_chocolate" style="display: none;">
-          
-        </div>
-      </section>
+  <section id="tela_dicas" class="tela_escondida">
     
+    <p id="p-tela_dicas">
+      Neste site você poderia encontrar dezenas de miau-dicas
+      para poder auxiliar no seu relacionamento com seu miau-parceiro.
+      As dicas irão de presentes bonitinhos até palavras de afirmação
+      da forma que você preferir. Aproveite! 😽
+    </p>
+    
+    <h1 id="titulo_tela_dicas">Escolha o que deseja:</h1> 
+    
+    <div class="container_grid">
+      
+      <div id="grid1">
+        <p class="titulos_grid">
+          Ideias de presentes românticos para seu parceiro
+          
+        </p>
+        
+        <div class="fotos_grid">
+          <img src="foto-baly-presente.png" alt="" id="foto_baly_presente">
+        </div>
+        
+        <button onclick="botao_presente()" id="botao_grid1">Clique Aqui!</button>
+      </div>
+      
+      
+      <div id="grid2">
+        <p class="titulos_grid">
+          Músicas para se dedicar ao seu parceiro
+        </p>
+        
+        <div class="fotos_grid">
+          <img src="foto-baly-musica.png" alt="" id="foto_baly_musica">
+        </div>
+        
+        <button onclick="" id="botao_grid2">Clique Aqui!</button>
+        
+      </div>
+      
+      <div id="grid3">
+        <p class="titulos_grid">
+          Palavras bonitas para se dizer ao seu parceiro
+        </p>
+        
+        <div class="fotos_grid">
+          <video src="video-baly-miando.mp4" loop muted playsinline id="video_baly_miando" disablePictureInPicture controlsList="nodownload noplaybackrate"></video>
+        </div>
+        
+        <button onclick="" id="botao_grid3">Clique Aqui!</button>
+        
+      </div>  
+    </div>
+    
+  </section>
   
-  
+  <section id="tela_dica_presentes" >
+    
+    <div id="titulo_tela_dica_presentes">
+      <h2>
+        Você precisa de dicas de presentes para dar para seu gatinho(a). Aqui é o lugar perfeito! 
+      </h2>
+    </div>
+    
+    <div id="conteiner_p_tela_dicas">
+
+      <p id="p-presente_mordidas_amor">
+        Meus presentes vão desde:
+        Mordidas de amor
+      </p>
+      
+      <video src="video-baly-mordendo.mp4" loop muted playsinline id="video_baly_mordendo" width="200px" disablePictureInPicture controlsList="nodownload noplaybackrate"></video>  
+      
+      <p id="p-presente_ronronar">
+      Até ronronar no peito de quem ama.
+    </p>
+
+    </div>
+    
+  </section>
+    
+    
 </main>
 <footer>
     

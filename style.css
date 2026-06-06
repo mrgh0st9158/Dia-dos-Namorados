@@ -1,61 +1,87 @@
-*{
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS (FONTS, RESET & BASE)
+   ========================================================================== */
+@font-face {
+    font-family: "Skinship";
+    src: url("Skinship Demo.otf") format("OpenType");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
-  background-color: #0c0507; /* Um preto com fundo levemente vinho */
-  color: #ffffff;
-  font-family: sans-serif;
-  align-items: center;
-  min-height: 100vh;
+    background-color: #0c0507; /* Um preto com fundo levemente vinho */
+    color: #ffffff;
+    font-family: sans-serif;
+    min-height: 100vh;
+    align-items: center;
 }
 
+.tela_escondida {
+    display: none !important;
+}
+
+/* Elementos globais de interação */
+button {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    background-color: rgb(163, 20, 67);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: rgb(66, 6, 24);
+}
+
+video {
+    pointer-events: none !important;
+}
+
+
+video::-webkit-media-controls,
+video::-webkit-media-controls-overlay-play-button,
+video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none !important;
+}
+
+/* ==========================================================================
+   2. BACKGROUND ANIMADO (GALÁXIA)
+   ========================================================================== */
 #background_galaxia {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-
-  /* MUDANÇA 1: Desativamos a repetição para cada círculo ter seu lugar único */
-  background-repeat: no-repeat;
-
-  /* MUDANÇA 2: Posicionamos elementos de tamanhos diferentes em cantos estratégicos */
-  background-image:
-    /* estrelas */
-    radial-gradient(3px 3px at 85% 15%, #ffffff, transparent),
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-image:
+        /* estrelas */
+        radial-gradient(3px 3px at 85% 15%, #ffffff, transparent),
+        radial-gradient(3px 3px at 90% 20%, #ffffff, transparent),
+        radial-gradient(2px 2px at 15% 85%, #ffffff, transparent),
+        radial-gradient(5px 5px at 25% 20%, #ffffff, transparent),
+        radial-gradient(3px 3px at 40% 20%, #ffffff, transparent),
+        radial-gradient(5px 5px at 10% 40%, #ffffff, transparent),
+        /* estrelas rosas românticas */
+        radial-gradient(3px 3px at 55% 45%, #fda4af, transparent),
+        radial-gradient(4px 4px at 80% 90%, #fda4af, transparent),
+        radial-gradient(5px 5px at 35% 80%, #fda4af, transparent),
+        /* NÚCLEO DA GALÁXIA: O grande brilho vermelho/vinho central */
+        radial-gradient(circle at 50% 50%, rgba(225, 29, 72, 0.25) 0%, transparent 60%),
+        /* NÉVOA SECUNDÁRIA: Um segundo brilho roxo/rosa no canto */
+        radial-gradient(circle at 80% 70%, rgba(192, 38, 211, 0.15) 0%, transparent 50%);
     
-    radial-gradient(3px 3px at 90% 20%, #ffffff, transparent),
-    
-    radial-gradient(2px 2px at 15% 85%, #ffffff, transparent),
-    
-    radial-gradient(5px 5px at 25% 20%, #ffffff, transparent),
-    
-    radial-gradient(3px 3px at 40% 20%, #ffffff, transparent),
-
-    radial-gradient(5px 5px at 10% 40%, #ffffff, transparent),
-
-
-    /* estrelas rosas românticas */
-    radial-gradient(3px 3px at 55% 45%, #fda4af, transparent),
-
-    radial-gradient(4px 4px at 80% 90%, #fda4af, transparent),
-
-    radial-gradient(5px 5px at 35% 80%, #fda4af, transparent),
-    
-
-    /* NÚCLEO DA GALÁXIA: O grande brilho vermelho/vinho central */
-    radial-gradient(circle at 50% 50%, rgba(225, 29, 72, 0.25) 0%, transparent 60%),
-    
-    /* NÉVOA SECUNDÁRIA: Um segundo brilho roxo/rosa no canto para quebrar a simetria */
-    radial-gradient(circle at 80% 70%, rgba(192, 38, 211, 0.15) 0%, transparent 50%);
-
-  /* Ativa a nossa animação de pulso */
-  animation: pulsoGalaxia 10s ease-in-out infinite alternate;
+    animation: pulsoGalaxia 10s ease-in-out infinite alternate;
 }
 
 @keyframes pulsoGalaxia {
@@ -69,207 +95,203 @@ body {
     }
 }
 
-header{
+
+/* ==========================================================================
+   3. HEADER (CABEÇALHO)
+   ========================================================================== */
+header {
     background-color: #3f0e2b;
     position: sticky;
+    top: 0;
     padding: 10px;
+    z-index: 10;
 }
 
-#conteiner_header{
+#conteiner_header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    
 }
 
-#titulo_header{
+#titulo_header {
     font-family: "Skinship";
     font-size: 25px;
-
 }
 
-.botoes_header{
+.botoes_header {
     color: #ffffff;
     font-size: 18px;
     background: none;
     border: none;
 }
 
-#conteiner_tela_inicio{
+
+/* ==========================================================================
+   4. TELA INICIAL
+   ========================================================================== */
+#conteiner_tela_inicio {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     margin-top: 60px;
     gap: 40px;
 }
 
-#conteiner_paragrafo_inicio{
+#conteiner_paragrafo_inicio {
     display: flex;
     flex-direction: column;
     gap: 25px;
     margin-top: 10px;
 }
 
-#paragrafo_inicial_1{
-    text-align: left;
+#paragrafo_inicial_1,
+#paragrafo_inicial_2 {
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: 19px;
     width: 730px;
-}
-
-#paragrafo_inicial_2{
     text-align: left;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 19px;
-    width: 730px;
 }
 
-#foto_baly_inicio{
+#foto_baly_inicio {
     width: 450px;
-    border-top-style: double;
-    border-top-color: #3a093b;
-    border-top-width: 12px;
-    border-left-style: double;
-    border-left-color: #3a093b;
-    border-left-width: 12px;
-    border-right-style: double;
-    border-right-width: 12px;
-    border-right-color: #000000;
-    border-bottom-style: double;
-    border-bottom-color: #000000;
-    border-bottom-width: 12px;
-    
+    border-top: 12px double #3a093b;
+    border-left: 12px double #3a093b;
+    border-right: 12px double #000000;
+    border-bottom: 12px double #000000;
 }
 
-#layout_botao_tela_inicial{
+/* Área do Botão de Pata Inferior */
+#layout_botao_tela_inicial {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-}
-
-#foto_botao_tela_inicial{
-    width: 80px;
-}
-
-#botao_tela_inicial{
-    background: none;
-    border: none;
-
-}
-
-#p-tela_inicial{
-    font-family: "Skinship";
-    font-size: 28px;
-
-}
-
-#conteiner_subtitulo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 70px;
-    gap: 240px;
-
-}
-
-button{
-    color: rgb(0, 0, 0);
-    background-color: rgb(163, 20, 67);
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-    font-family: 'Times New Roman', Times, serif;
-    
-
-}
-
-button:hover{
-    background-color: rgb(66, 6, 24);
-}
-
-#p-dica_caixa_bombom{
-    font-size: 20px;
-    width: 275px;
-    text-align: left;
-}
-
-.conteiner_caixa_bombom{
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-}
-
-
-#botao_tela2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-
-#titulo_tela_dicas{
-    text-align: center;
-    font-family: "Skinship";
-    font-size: 30px;
     margin-top: 30px;
 }
 
+#p-tela_inicial {
+    font-family: "Skinship";
+    font-size: 28px;
+}
+
+#botao_tela_inicial {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#foto_botao_tela_inicial {
+    width: 80px;
+}
+
+
+/* ==========================================================================
+   5. TELA DE DICAS (GRID PRINCIPAL)
+   ========================================================================== */
+#tela_dicas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#titulo_tela_dicas {
+    font-family: "Skinship";
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#p-tela_dicas {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 23px;
+    max-width: 600px;
+    width: 60%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Estrutura do Grid */
 .container_grid {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 40px;
-  gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: 40px;
+    gap: 30px;
 }
 
 .container_grid div {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     background-color: #6b0a1a;
-    color: #000;
+    color: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 15px;
     padding: 15px 20px;
     font-size: 30px;
-    text-align: center;
-    gap: 35px;
     font-family: 'Times New Roman', Times, serif;
     font-style: oblique;
-    
+    text-align: center;
+    gap: 35px;
 }
 
-.titulos_grid{
+/* Pseudo-elementos decorativos das caixas do grid */
+.container_grid > div::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+    width: 160px;
+    height: 160px;
+    background-image: url(png-rosas.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.container_grid > div::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px; 
+    width: 200px; 
+    height: 200px;
+    background-image: url(png-coracoes.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+/* Elementos internos do Grid */
+.titulos_grid {
     min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-#grid1,
-#grid2,
-#grid3{
+#grid1, #grid2, #grid3 {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-
 }
 
-#botao_grid1,
-#botao_grid2,
-#botao_grid3{
+#botao_grid1, #botao_grid2, #botao_grid3 {
     width: 80px;
 }
 
 #foto_baly_presente,
 #foto_baly_musica,
-#video_baly_miando{
+#video_baly_miando {
     width: 250px;
     height: 200px;
     object-fit: cover;
@@ -277,9 +299,39 @@ button:hover{
     border-width: 7px;
 }
 
-@font-face {
+
+/* ==========================================================================
+   6. TELA DE DETALHE DOS PRESENTES
+   ========================================================================== */
+
+#tela_dica_presentes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#titulo_tela_dica_presentes{
+    text-align: center;
     font-family: "Skinship";
-    src: url(Skinship\ Demo.otf) format("OpenType");
-    font-weight: normal;
-    font-size: normal;
+    font-size: 20px;
+    margin-top: 20px;
+    width: 800px;
+    max-width: 80%;
+}
+
+#conteiner_p_tela_dicas{
+    align-self: flex-start;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+#p-presente_ronronar,
+#p-presente_mordidas_amor{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 27px;
+
 }
