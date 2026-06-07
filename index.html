@@ -31,7 +31,7 @@
 
   <main>
 
-    <section id="tela_inicial" class="tela_escondida">
+    <section id="tela_inicial">
 
       <div id="conteiner_tela_inicio">
 
@@ -81,8 +81,8 @@
     </div>
     
   </section>
-    
-    
+  
+  
   <section id="tela_dicas" class="tela_escondida">
     
     <p id="p-tela_dicas">
@@ -94,43 +94,41 @@
     
     <h1 id="titulo_tela_dicas">Escolha o que deseja:</h1> 
     
-    <div class="container_grid">
+    <div class="container_grid grid_3_cards grid_com_borda">
       
-      <div id="grid1">
+      <div class="card">
         <p class="titulos_grid">
           Ideias de presentes românticos para seu parceiro
           
         </p>
         
-        <div class="fotos_grid">
-          <img src="foto-baly-presente.png" alt="" id="foto_baly_presente">
-        </div>
+        <img src="foto-baly-presente.png" alt="" id="foto_baly_presente">
         
         <button onclick="botao_presente()" id="botao_grid1">Clique Aqui!</button>
       </div>
       
       
-      <div id="grid2">
+      <div class="card">
         <p class="titulos_grid">
           Músicas para se dedicar ao seu parceiro
         </p>
         
-        <div class="fotos_grid">
-          <img src="foto-baly-musica.png" alt="" id="foto_baly_musica">
-        </div>
+        <img src="foto-baly-musica.png" alt="" id="foto_baly_musica">
+        
         
         <button onclick="" id="botao_grid2">Clique Aqui!</button>
         
       </div>
       
-      <div id="grid3">
+      <div class="card">
         <p class="titulos_grid">
           Palavras bonitas para se dizer ao seu parceiro
         </p>
         
-        <div class="fotos_grid">
-          <video src="video-baly-miando.mp4" loop muted playsinline id="video_baly_miando" disablePictureInPicture controlsList="nodownload noplaybackrate"></video>
-        </div>
+        
+        <video src="video-baly-miando.mp4" id="video_baly_miando" loop muted playsinline disablepictureinpicture controlsList="nodownload noplaybackrate"></video>
+        
+        
         
         <button onclick="" id="botao_grid3">Clique Aqui!</button>
         
@@ -139,28 +137,46 @@
     
   </section>
   
-  <section id="tela_dica_presentes" >
+  <section id="tela_dica_presentes" class="tela_escondida">
     
     <div id="titulo_tela_dica_presentes">
       <h2>
-        Você precisa de dicas de presentes para dar para seu gatinho(a). Aqui é o lugar perfeito! 
+        Você precisa de dicas de presentes para dar para seu(a) gatinho(a). Aqui é o lugar perfeito! 
       </h2>
     </div>
     
     <div id="conteiner_p_tela_dicas">
-
+      
       <p id="p-presente_mordidas_amor">
         Meus presentes vão desde:
-        Mordidas de amor
       </p>
       
-      <video src="video-baly-mordendo.mp4" loop muted playsinline id="video_baly_mordendo" width="200px" disablePictureInPicture controlsList="nodownload noplaybackrate"></video>  
-      
-      <p id="p-presente_ronronar">
-      Até ronronar no peito de quem ama.
-    </p>
-
     </div>
+      <div class="container_grid grid_2_cards">
+
+        <div class="card">
+
+          <p class="titulos_grid">
+            Mordidas de amor
+          </p>
+          
+          <video src="video-baly-mordendo.mp4" id="video_baly_mordendo" loop muted playsinline disablepictureinpicture controlsList="nodownload noplaybackrate"></video> 
+
+        </div>
+        <div class="card">
+          
+          <p class="titulos_grid">
+            Até ronronar no peito de quem ama.
+          </p>
+
+          <img src="foto_baly_ronronando.JPG" alt="" id="foto_baly_ronronando">
+
+        </div>
+      </div>
+      
+      
+      
+      
     
   </section>
     
