@@ -8,6 +8,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Roboto";
+    src: url(Roboto-VariableFont_wdth\,wght.ttf) format("TrueType");
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -32,13 +39,18 @@ button {
     color: rgb(0, 0, 0);
     background-color: rgb(163, 20, 67);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
     border: none;
 }
 
 button:hover {
     background-color: rgb(66, 6, 24);
+}
+
+#botao_tela_inicial:hover{
+    scale: 1.07;
+    filter: brightness(0.5);
 }
 
 video {
@@ -144,15 +156,19 @@ header {
     flex-direction: column;
     gap: 25px;
     margin-top: 10px;
+    background-color: #3f0e2b;
+    padding: 20px;
+    border-radius: 20px;
+
 }
 
 #paragrafo_inicial_1,
 #paragrafo_inicial_2 {
     font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
     font-size: 19px;
     width: 730px;
     text-align: left;
+    
 }
 
 #foto_baly_inicio {
@@ -254,6 +270,7 @@ header {
     font-style: oblique;
     text-align: center;
     gap: 35px;
+    
 }
 
 .titulos_grid {
@@ -261,12 +278,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 #botao_grid1,
 #botao_grid2,
 #botao_grid3 {
     width: 80px;
+
 }
 
 #foto_baly_presente,
