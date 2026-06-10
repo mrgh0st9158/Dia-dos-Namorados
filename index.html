@@ -31,7 +31,7 @@
 
   <main>
 
-    <section id="tela_inicial">
+    <section id="tela_inicial" class="tela_escondida">
 
       <div id="conteiner_tela_inicio">
 
@@ -76,7 +76,7 @@
     <div id="layout_botao_tela_inicial">
       <p id="p-tela_inicial">Clique Aqui!</p>
       
-      <button onclick="abrir_tela_dicas()" id="botao_tela_inicial"><img src="foto-pata.PNG" alt="" id="foto_botao_tela_inicial"></button>
+      <button onclick="abrir_tela_dicas()" id="botao_tela_inicial"><img src="foto-pata.PNG" alt="" class="foto_botao_pata"></button>
 
     </div>
     
@@ -84,7 +84,7 @@
   
   
   <section id="tela_dicas" class="tela_escondida">
-    
+
     <p id="p-tela_dicas">
       Neste site você poderia encontrar dezenas de miau-dicas
       para poder auxiliar no seu relacionamento com seu miau-parceiro.
@@ -102,9 +102,15 @@
           
         </p>
         
+        
         <img src="foto-baly-presente.png" alt="" id="foto_baly_presente">
         
-        <button onclick="botao_presente()" id="botao_grid1">Clique Aqui!</button>
+        <div class="container_botao_card">
+          <p>Clique Aqui!</p>
+          
+          <button onclick="botao_presente()" id="botao_grid1"><img src="foto-pata.PNG" alt="" class="foto_botao_pata"></button>
+        </div>
+
       </div>
       
       
@@ -114,9 +120,12 @@
         </p>
         
         <img src="foto-baly-musica.png" alt="" id="foto_baly_musica">
-        
-        
-        <button onclick="" id="botao_grid2">Clique Aqui!</button>
+
+        <div class="container_botao_card">
+          <p>Clique Aqui!</p>
+          
+          <button onclick="" id="botao_grid2"><img src="foto-pata.PNG" alt="" class="foto_botao_pata"></button>
+        </div>
         
       </div>
       
@@ -129,15 +138,19 @@
         <video src="video-baly-miando.mp4" id="video_baly_miando" loop muted playsinline disablepictureinpicture controlsList="nodownload noplaybackrate"></video>
         
         
+        <div class="container_botao_card">
+        <p>Clique Aqui!</p>
         
-        <button onclick="" id="botao_grid3">Clique Aqui!</button>
+
+          <button onclick="" id="botao_grid3"><img src="foto-pata.PNG" alt="" class="foto_botao_pata"></button>
+        </div>
         
       </div>  
     </div>
     
   </section>
   
-  <section id="tela_dica_presentes" class="tela_escondida">
+  <section id="tela_dica_presentes">
     
     <div id="titulo_tela_dica_presentes">
       <h2>
@@ -173,9 +186,32 @@
 
         </div>
       </div>
+
+      
+
+      
+
+        <p id="p-tela_dicas_presentes">Abaixo darei dicas de presentinhos para dar ao seu parceiro. 😼</p>
+        
+        
+        <div class="container_slider">
+          <div class="container_bloco_slider">
+            <div class="bloco c" id="first"></div>
+            <div class="bloco a" id="second"></div>
+            <div class="bloco b" id="third"></div>
+            
+          
+            <div class="container_botao_slider">
+              <a href="javascript:void(0);" class="btn focus" id="one"></a>
+              <a href="javascript:void(0);" class="btn" id="two"></a>
+            <a href="javascript:void(0);" class="btn" id="three"></a>
+          </div>
+        </div>
+      </div>
       
     
-  </section>
+      
+    </section>
     
     
 </main>

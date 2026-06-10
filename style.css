@@ -15,6 +15,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "SerifBold";
+    src: url(FreeSerifBold.ttf) format("TrueType");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BirdsOfParadise";
+    src: url(Birds\ of\ Paradise\ ©\ PERSONAL\ USE\ ONLY.ttf) format("TrueType");
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -48,7 +62,7 @@ button:hover {
     background-color: rgb(66, 6, 24);
 }
 
-#botao_tela_inicial:hover{
+.foto_botao_pata:hover{
     scale: 1.07;
     filter: brightness(0.5);
 }
@@ -199,7 +213,7 @@ header {
     cursor: pointer;
 }
 
-#foto_botao_tela_inicial {
+.foto_botao_pata {
     width: 80px;
 }
 
@@ -284,8 +298,12 @@ header {
 #botao_grid1,
 #botao_grid2,
 #botao_grid3 {
-    width: 80px;
+    background: none;
 
+}
+
+.container_botao_card{
+    font-family: "Skinship";
 }
 
 #foto_baly_presente,
@@ -306,24 +324,10 @@ header {
     content: "";
     position: absolute;
     bottom: 0;
-    right: -20px;
+    right: -10px;
     width: 160px;
     height: 160px;
     background-image: url(png-rosas.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.7;
-    z-index: 1;
-}
-
-.grid_com_borda .card::after {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: -20px; 
-    width: 200px; 
-    height: 200px;
-    background-image: url(png-coracoes.png); 
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.7;
@@ -396,4 +400,118 @@ header {
     object-fit: cover;
     border-style: double;
     border-width: 7px;
+}
+
+#p-tela_dicas_presentes{
+    font-family: "BirdsOfParadise";
+    font-size: 35px;
+    margin-top: 120px;
+}
+
+/* ==========================================================================
+   7. SISTEMA DA ANIMAÇÃO CARROSEL
+   ========================================================================== */
+
+.container_slider {
+  position: relative;
+  top: 0px;
+  right: 22px;
+  display: inline-block;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+  margin-top: 120px;
+}
+
+.bloco {
+  position: absolute;
+  display: block;
+  width: 390px;
+  height: 247px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  border-radius: 4px;
+}
+
+.container_bloco_slider {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  width: 500px;
+  height: 289px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.a {
+  -webkit-transform: translate3d(70px, -80px, -50px);
+  transform: translate3d(70px, -80px, -50px);
+  opacity: .6;
+}
+
+.b {
+  -webkit-transform: translate3d(110px, 80px, -60px);
+  transform: translate3d(110px, 80px, -60px);
+  opacity: .1;
+}
+
+.c {
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+  opacity: 1;
+  box-shadow: 0 20px 50px rgba(0, 34, 45, 0.5);
+}
+
+#first {
+  background-color: blue;
+}
+
+#second {
+  background-color: green;
+}
+
+#third {
+  background-color: red;
+}
+
+.container_botao_slider {
+  position: absolute;
+  z-index: 20;
+  bottom: -5px;
+  left: 385px;
+}
+
+.btn {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  opacity: .5;
+  border-radius: 50%;
+  background-color: #cbcbcb;
+}
+
+.focus {
+  width: 15px;
+  height: 15px;
+  -webkit-transform: translate(-3px, -3px);
+  transform: translate(-3px, -3px);
+  opacity: 1;
+  background-color: #5924c3;
+}
+
+#one {
+  left: 0;
+}
+
+#two {
+  left: 25px;
+}
+
+#three {
+  left: 50px;
 }
