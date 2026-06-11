@@ -53,37 +53,43 @@ function botao_presente(){
 
 var shadow = '0 20px 50px rgba(0,34,45,0.5)';
 
-function styles(item_id, x, y, z , opacity, shadow){
-	$(item_id).css({
-		transform: 'translate3d('+ x +'px, ' + y + 'px, ' + z +'px) ',
-		opacity: opacity,
-		'box-shadow': shadow
-	});
+// Função para aplicar os estilos CSS nos blocos
+function styles(item_id, x, y, z, opacity, shadowValue) {
+    const elemento = document.querySelector(item_id);
+    if (elemento) {
+        elemento.style.transform = 'translate3d(' + x + 'px, ' + y + 'px, ' + z + 'px)';
+        elemento.style.opacity = opacity;
+        elemento.style.boxShadow = shadowValue;
+    }
 }
 
-$('#one').click(function(){
-	$('#one').addClass('focus');
-	$('#two').removeClass('focus');
-	$('#three').removeClass('focus');
-	styles('#first', 0, 0, 0, 1, shadow);
-	styles('#second', 70, -80, -50, 0.6, 'none');
-	styles('#third', 110, 80, -60, 0.1, 'none');
-}); 
+// Função para gerenciar qual botão ganha a classe 'focus'
+function alternarFoco(botaoAtivo) {
+    document.getElementById('one').classList.remove('focus');
+    document.getElementById('two').classList.remove('focus');
+    document.getElementById('three').classList.remove('focus');
+    
+    document.getElementById(botaoAtivo).classList.add('focus');
+}
 
-
-$('#two').click(function(){
-	$('#one').removeClass('focus');
-	$('#two').addClass('focus');
-	$('#three').removeClass('focus');
-	styles('#first', 110, 80, -60, 0.1, 'none');
-	styles('#second', 0, 0, 0, 1, shadow);
-	styles('#third', 70, -80, -50, 0.6, 'none');
+// Eventos de clique para cada botão
+document.getElementById('one').addEventListener('click', function() {
+    alternarFoco('one');
+    styles('#first', 0, 0, 0, 1, shadow);
+    styles('#second', 70, -80, -50, 0.6, 'none');
+    styles('#third', 110, 80, -60, 0.1, 'none');
 });
-$('#three').click(function(){
-	$('#one').removeClass('focus');
-	$('#two').removeClass('focus');
-	$('#three').addClass('focus');
-	styles('#first', 70, -80, -50, 0.6, 'none');
-	styles('#second', 110, 80, -60, 0.1, 'none');
-	styles('#third', 0, 0, 0, 1, shadow);
+
+document.getElementById('two').addEventListener('click', function() {
+    alternarFoco('two');
+    styles('#first', 110, 80, -60, 0.1, 'none');
+    styles('#second', 0, 0, 0, 1, shadow);
+    styles('#third', 70, -80, -50, 0.6, 'none');
+});
+
+document.getElementById('three').addEventListener('click', function() {
+    alternarFoco('three');
+    styles('#first', 70, -80, -50, 0.6, 'none');
+    styles('#second', 110, 80, -60, 0.1, 'none');
+    styles('#third', 0, 0, 0, 1, shadow);
 });

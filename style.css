@@ -427,8 +427,8 @@ header {
 .bloco {
   position: absolute;
   display: block;
-  width: 390px;
-  height: 247px;
+  width: 400px;
+  height: 250px;
   -webkit-transition: all .4s;
   transition: all .4s;
   border-radius: 4px;
@@ -438,8 +438,8 @@ header {
   position: absolute;
   top: 0px;
   left: 100px;
-  width: 500px;
-  height: 289px;
+  width: 400px;
+  height: 250px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
@@ -514,4 +514,11 @@ header {
 
 #three {
   left: 50px;
+}
+
+#foto_baly_perfil{
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-width: 7px;
 }
