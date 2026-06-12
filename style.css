@@ -193,7 +193,7 @@ header {
     border-bottom: 12px double #000000;
 }
 
-/* Área do Botão de Pata Inferior */
+
 #layout_botao_tela_inicial {
     display: flex;
     flex-direction: column;
@@ -246,7 +246,7 @@ header {
 }
 
 /* ==========================================================================
-   ESTILIZAÇÃO ESTRUTURAL DOS GRIDS
+   6. ESTILIZAÇÃO ESTRUTURAL DOS GRIDS
    ========================================================================== */
 
 .container_grid {
@@ -317,16 +317,16 @@ header {
 }
 
 /* ==========================================================================
-   DECORAÇÃO GRID 1
+   7. DECORAÇÃO GRID 1
    ========================================================================== */
 
 .grid_com_borda .card::before{
     content: "";
     position: absolute;
     bottom: 0;
-    right: -10px;
-    width: 160px;
-    height: 160px;
+    right: -18px;
+    width: 210px;
+    height: 210px;
     background-image: url(png-rosas.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -336,7 +336,7 @@ header {
 
 
 /* ==========================================================================
-   6. TELA DE DETALHE DOS PRESENTES
+   8. TELA DE DETALHE DOS PRESENTES
    ========================================================================== */
 
 #tela_dica_presentes{
@@ -344,6 +344,7 @@ header {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding-bottom: 130px;
 }
 
 #titulo_tela_dica_presentes{
@@ -402,18 +403,13 @@ header {
     border-width: 7px;
 }
 
-#p-tela_dicas_presentes{
-    font-family: "BirdsOfParadise";
-    font-size: 35px;
-    margin-top: 120px;
-}
 
 /* ==========================================================================
-   7. SISTEMA DA ANIMAÇÃO CARROSEL
+   9. SISTEMA DA ANIMAÇÃO CARROSEL
    ========================================================================== */
 
 .container_slider {
-  position: relative;
+    position: relative;
   top: 0px;
   right: 22px;
   display: inline-block;
@@ -422,77 +418,81 @@ header {
   -webkit-perspective: 800px;
   perspective: 800px;
   margin-top: 120px;
+  
+  height: 320px;
 }
 
 .bloco {
-  position: absolute;
-  display: block;
-  width: 400px;
-  height: 250px;
-  -webkit-transition: all .4s;
-  transition: all .4s;
-  border-radius: 4px;
+    position: absolute;
+    display: block;
+    width: 400px;
+    height: 250px;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    border-radius: 4px;
 }
 
 .container_bloco_slider {
-  position: absolute;
-  top: 0px;
-  left: 100px;
-  width: 400px;
-  height: 250px;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    width: 400px;
+    height: 250px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    
 }
 
 .a {
-  -webkit-transform: translate3d(70px, -80px, -50px);
-  transform: translate3d(70px, -80px, -50px);
-  opacity: .6;
+    -webkit-transform: translate3d(120px, -40px, 0px);
+    transform: translate3d(120px, -40px, 0px);
+    opacity: 1;
+    box-shadow: 0 20px 50px rgba(0, 34, 45, 0.5); 
 }
 
 .b {
-  -webkit-transform: translate3d(110px, 80px, -60px);
-  transform: translate3d(110px, 80px, -60px);
-  opacity: .1;
+    -webkit-transform: translate3d(400px, 0px, -60px);
+    transform: translate3d(400px, 0px, -60px);
+    opacity: .6;
 }
 
 .c {
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
-  opacity: 1;
-  box-shadow: 0 20px 50px rgba(0, 34, 45, 0.5);
+    -webkit-transform: translate3d(-100px, 0px, -50px);
+    transform: translate3d(-100px, 0px, -50px);
+    opacity: .1;
+    
 }
 
 #first {
-  background-color: blue;
+    background-color: blue;
 }
 
 #second {
-  background-color: green;
+    background-color: green;
 }
 
 #third {
-  background-color: red;
+    background-color: red;
 }
 
 .container_botao_slider {
-  position: absolute;
-  z-index: 20;
+    position: absolute;
+    z-index: 20;
   bottom: -5px;
   left: 385px;
 }
 
 .btn {
-  position: absolute;
-  top: 0;
-  display: block;
-  width: 10px;
-  height: 10px;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  opacity: .5;
-  border-radius: 50%;
-  background-color: #cbcbcb;
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    opacity: .5;
+    border-radius: 50%;
+    background-color: #cbcbcb;
 }
 
 .focus {
@@ -505,20 +505,42 @@ header {
 }
 
 #one {
-  left: 0;
+    left: 0;
 }
 
 #two {
-  left: 25px;
+    left: 25px;
 }
 
 #three {
-  left: 50px;
+    left: 50px;
 }
 
-#foto_baly_perfil{
+/* ==========================================================================
+   10. TELA DE DICAS DE PRESENTES
+   ========================================================================== */
+
+#p-tela_dicas_presentes{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    margin-top: 120px;
+}
+
+#foto_baly_buque,
+#foto_baly_caixa_bombom,
+#foto_baly_carta_a_mao{
     width: 400px;
     height: 250px;
     object-fit: cover;
     border-width: 7px;
+}
+
+#p-buque,
+#p-caixa_bombom,
+#p-carta_a_mao{
+    font-family: "Skinship";
+    font-size: 35px;
+    text-align: center;
+    margin-top: 10px;       
+    
 }
